@@ -14,58 +14,79 @@ This repository aims to:
 
 ```
 tides/
-├── tutorials/          # Step-by-step learning paths
+├── tutorials/          # Human-readable learning materials
 │   ├── programming/    # Programming tutorials
-│   ├── tools/          # Tool-specific guides
-│   └── concepts/       # Conceptual learning paths
-├── guides/             # Quick reference guides
-│   ├── best-practices/ # Best practice documents
-│   ├── how-to/         # How-to guides
-│   └── troubleshooting/# Problem-solving guides
+│   ├── tools/          # Tool-specific tutorials
+│   └── concepts/       # Conceptual tutorials
+├── guides/             # AI assistant teaching scripts
+│   ├── programming/    # Programming teaching guides
+│   ├── tools/          # Tool-specific teaching guides
+│   └── concepts/       # Conceptual teaching guides
 └── templates/          # Templates for creating new content
 ```
 
-## Using the Tutorials
+## The Dual Structure
 
-### For Human Learners
-1. Browse the `tutorials/` or `guides/` directory
-2. Choose a topic that interests you
-3. Follow the markdown files in sequence (numbered or as indicated)
-4. Complete exercises and practice problems
-5. Use AI assistance when needed by referencing the tutorial
+**Tutorials** and **Guides** are designed to work together as paired content:
 
-### For AI Assistants
-These tutorials are structured to be AI-friendly:
-- Clear learning objectives at the start
-- Structured sections with consistent formatting
-- Code examples with expected outputs
-- Checkpoints for validation
-- Context sections to help understand learner needs
+- **Tutorials** are human-readable documents that learners can read and work through at their own pace. They contain explanations, examples, and exercises.
+- **Guides** are AI assistant teaching scripts that provide a structured approach for AI to tutor a human through the same material. They include topics to cover, questions to ask, and ways to verify understanding.
 
-### For Collaborative Learning (AI + Human)
-1. Human selects a tutorial
-2. AI acts as tutor/guide, explaining concepts
-3. Human works through exercises with AI support
-4. AI validates understanding and provides feedback
-5. Both iterate on difficult concepts together
+Each topic should have both a tutorial (for humans) and a guide (for AI assistants), aligned in structure and content.
+
+## Three Learning Modes
+
+### Mode 1: Self-Paced (Human Only)
+The learner reads the tutorial independently without AI assistance.
+- Browse the `tutorials/` directory
+- Choose a topic and follow the content
+- Complete exercises and practice at your own pace
+
+### Mode 2: AI-Guided (AI + Human Interactive)
+The AI assistant uses the guide to teach, without the human reading the tutorial directly.
+- AI references the guide in `guides/` directory
+- AI covers topics in order, asks verification questions
+- Human learns through conversation and exercises
+- AI adapts based on human's responses
+
+### Mode 3: Collaborative (AI + Human + Tutorial)
+The human reads the tutorial while the AI assists using the guide.
+- Human works through the tutorial
+- AI follows along using the paired guide
+- Human asks questions, AI provides clarification
+- AI asks verification questions from the guide
+- Both work together through exercises
 
 ## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
-- Creating new tutorials
-- Improving existing content
-- Structuring content for both human and AI use
-- Testing tutorials with learners
+- Creating paired tutorials and guides
+- Structuring content for self-paced learning (tutorials)
+- Structuring teaching scripts for AI assistants (guides)
+- Ensuring tutorials and guides align with each other
+- Testing content with learners
 
-## Creating a Tutorial
+## Creating Content
 
-Use the template in `templates/tutorial-template.md` to create new tutorials. Key elements:
-- **Learning Objectives**: Clear goals
-- **Prerequisites**: What learners should know
-- **Structure**: Logical progression of concepts
-- **Examples**: Practical, runnable code
-- **Exercises**: Hands-on practice
-- **Validation**: Checkpoints for understanding
+### Creating a Tutorial (Human-Focused)
+Use the template in `templates/tutorial-template.md` to create content that humans can read independently. Key elements:
+- **Clear explanations**: Concepts explained in readable prose
+- **Examples**: Practical, runnable code with explanations
+- **Exercises**: Hands-on practice with solutions
+- **Self-contained**: Learner can understand without external help
+
+### Creating a Guide (AI-Focused)
+Use the template in `templates/guide-template.md` to create teaching scripts for AI assistants. Key elements:
+- **Teaching flow**: Structured progression of topics
+- **Questions to ask**: Verification questions at checkpoints
+- **Common misconceptions**: What to watch for and clarify
+- **Adaptive strategies**: How to help if learner struggles
+- **Exercise guidance**: How to present and help with exercises
+
+### Pairing Content
+Each tutorial should have a corresponding guide with the same filename in the parallel directory structure. For example:
+- `tutorials/tools/git-basics.md` pairs with `guides/tools/git-basics.md`
+- Both cover the same material, but optimized for different modes of learning
 
 ## License
 

@@ -2,6 +2,7 @@
 title: [Tutorial Title]
 difficulty: beginner|intermediate|advanced
 duration: [X] minutes
+paired_guide: /guides/[category]/[filename].md
 prerequisites: 
   - Prerequisite 1
   - Prerequisite 2
@@ -14,7 +15,9 @@ topics:
 
 ## Overview
 
-Brief description of what this tutorial covers and why it's useful. Include real-world applications or use cases.
+Brief description of what this tutorial covers and why it's useful. Include real-world applications or use cases to motivate the learning.
+
+> **Note for AI assistants**: This tutorial has a paired teaching guide at `/guides/[category]/[filename].md` that provides structured guidance for teaching this material interactively.
 
 ## Learning Objectives
 
@@ -35,7 +38,7 @@ If you need to learn these first, check out:
 
 ## Setup
 
-What the learner needs to have ready:
+What you need to have ready:
 - Software/tools to install
 - Accounts to create
 - Files to download
@@ -45,87 +48,194 @@ What the learner needs to have ready:
 command to install something
 ```
 
+**Verify your setup:**
+```bash
+# Command to verify installation
+verification command here
+```
+
+You should see:
+```
+expected output
+```
+
 ---
 
 ## Section 1: [First Concept]
 
-### Introduction
+### What is [Concept]?
 
-Explain the concept at a high level. Why is it important? Where is it used?
+[Concept] is [clear definition]. Think of it like [relatable analogy that makes it easy to understand].
 
-### Explanation
+In practice, you use [concept] when you need to [practical use case]. For example, [real-world scenario].
 
-Provide detailed explanation with examples.
+### Why [Concept] Matters
+
+[Explain the importance and benefits of understanding this concept. What problems does it solve? What becomes easier or possible?]
+
+### Understanding [Concept]
+
+[Detailed explanation with clear, readable prose. Break down the concept into understandable parts.]
+
+Let's look at a simple example:
 
 ```[language]
-# Code example
-example code here
+# Clear, well-commented example
+code here
 ```
+
+**What's happening here:**
+1. [Step-by-step breakdown of the code]
+2. [Explain each significant line or block]
+3. [Show the output or result]
 
 **Expected Output:**
 ```
 output here
 ```
 
-### Key Points
-- Important point 1
-- Important point 2
+### Key Points to Remember
+
+- **Point 1**: [Important takeaway]
+- **Point 2**: [Important takeaway]
+- **Point 3**: [Important takeaway]
 
 ### Exercise 1.1: [Exercise Name]
 
-**Task:** Describe what the learner should do.
+Now it's your turn! Try this exercise to practice what you've learned.
+
+**Task:** [Clear description of what to do]
+
+**Hints:**
+<details>
+<summary>Hint 1: Getting started</summary>
+[Gentle hint about approach]
+</details>
+
+<details>
+<summary>Hint 2: If you're stuck</summary>
+[More specific guidance]
+</details>
+
+**Solution:**
+<details>
+<summary>Click to see solution</summary>
+
+```[language]
+# Solution code with comments
+solution here
+```
+
+**Explanation:** [Why this solution works and what it demonstrates]
+</details>
+
+**Self-Check:** Before moving on, make sure you can:
+- [ ] Understand what [concept] does
+- [ ] Explain why [concept] is useful
+- [ ] Write a simple example using [concept]
+
+---
+
+## Section 2: [Second Concept]
+
+### What is [Concept]?
+
+[Clear explanation of second concept]
+
+### How [Concept] Works
+
+[Detailed explanation with examples]
+
+```[language]
+# Example code
+code here
+```
+
+**Breaking it down:**
+[Step-by-step explanation]
+
+### Connecting the Concepts
+
+Now that you understand both [Concept 1] and [Concept 2], let's see how they relate:
+
+[Explain the relationship or how they work together]
+
+### Exercise 2.1: [Exercise Name]
+
+**Task:** [Exercise description]
 
 <details>
 <summary>Hint</summary>
-Provide a hint if the learner gets stuck.
+[Helpful hint]
 </details>
 
 <details>
 <summary>Solution</summary>
 
 ```[language]
-# Solution code
 solution here
 ```
 
-**Explanation:** Why this solution works.
+[Explanation]
 </details>
 
-### Checkpoint 1
-
-Before moving on, make sure you can:
-- [ ] Checkpoint item 1
-- [ ] Checkpoint item 2
+**Self-Check:** Before moving on, make sure you can:
+- [ ] Checklist item 1
+- [ ] Checklist item 2
 
 ---
 
-## Section 2: [Second Concept]
+## Section 3: [Building on Concepts]
 
-[Follow the same structure as Section 1]
+### Bringing It All Together
 
----
-
-## Section 3: [Building on Previous Concepts]
-
-### Combining Concepts
-
-Show how the concepts work together.
+Now let's combine what you've learned into something more practical. [Introduce how the concepts integrate]
 
 ### Real-World Example
 
-Provide a practical example that combines what they've learned.
+Here's an example you might encounter in real projects:
 
 ```[language]
-# Comprehensive example
+# Comprehensive example combining previous concepts
 combined example here
+```
+
+**Understanding the code:**
+- **Lines X-Y**: [Explanation of this part]
+- **Lines A-B**: [Explanation of this part]
+- **Key interaction**: [How the concepts work together]
+
+**Expected Output:**
+```
+output here
 ```
 
 ### Common Pitfalls
 
-List common mistakes and how to avoid them:
+As you work with [topic], watch out for these common mistakes:
 
-1. **Pitfall 1**: Description and how to avoid it
-2. **Pitfall 2**: Description and how to avoid it
+#### Pitfall 1: [Description]
+
+**The Problem:** [What goes wrong]
+
+**Why it happens:** [Explanation]
+
+**How to avoid it:**
+```[language]
+# Good approach
+correct code
+```
+
+#### Pitfall 2: [Description]
+
+[Same structure]
+
+### Best Practices
+
+- ✅ **Do this**: [Good practice with explanation]
+- ✅ **Do this**: [Good practice with explanation]
+- ❌ **Avoid this**: [What not to do with explanation]
+- ❌ **Avoid this**: [What not to do with explanation]
 
 ---
 
@@ -133,56 +243,176 @@ List common mistakes and how to avoid them:
 
 ### Project Description
 
-Describe a small project that uses all the concepts learned.
+[Engaging description of a small project that uses all concepts learned]
+
+This project will help you:
+- Apply [concept 1] in practice
+- Use [concept 2] effectively
+- Integrate everything you've learned
 
 ### Requirements
+
+Build a [project type] that:
 - Requirement 1
 - Requirement 2
 - Requirement 3
 
 ### Getting Started
-Steps to begin the project.
 
-### Validation
-How to verify the project works correctly.
+**Step 1: Set up your project**
+```bash
+# Setup commands
+commands here
+```
+
+**Step 2: Plan your approach**
+
+Before coding, think about:
+1. [Planning question 1]
+2. [Planning question 2]
+
+**Step 3: Implement the features**
+
+Start with [first feature]. Here's a skeleton to get you started:
+
+```[language]
+# Starter code
+skeleton code
+```
+
+**Step 4: Test your work**
+
+Make sure it works by testing:
+- Test case 1
+- Test case 2
+
+### Hints and Tips
+
+<details>
+<summary>If you're not sure where to start</summary>
+[Guidance for getting started]
+</details>
+
+<details>
+<summary>If you're stuck on [specific part]</summary>
+[Specific help]
+</details>
+
+### Example Solution
+
+<details>
+<summary>Click to see one possible solution</summary>
+
+```[language]
+# Complete solution
+solution code
+```
+
+**Key points in this solution:**
+- [Highlight important aspects]
+- [Explain design decisions]
+- [Note alternative approaches]
+</details>
+
+### Extending the Project
+
+If you want to go further, try:
+- Extension idea 1
+- Extension idea 2
+- Extension idea 3
 
 ---
 
 ## Summary
 
-Recap the main points:
-- Key takeaway 1
-- Key takeaway 2
-- Key takeaway 3
+Congratulations on completing this tutorial! Let's review what you learned:
 
-## Next Steps
+### Key Takeaways
 
-Where to go from here:
-- [Advanced tutorial on this topic]
-- [Related tutorial on different topic]
-- [Further reading resources]
+- **[Concept 1]**: [Summary of what you learned]
+- **[Concept 2]**: [Summary of what you learned]
+- **[Concept 3]**: [Summary of what you learned]
 
-## Additional Resources
+### Skills You've Gained
 
-- [Resource 1](URL): Description
-- [Resource 2](URL): Description
-- [Resource 3](URL): Description
+You can now:
+- ✓ [Skill 1]
+- ✓ [Skill 2]
+- ✓ [Skill 3]
+
+### Self-Assessment
+
+Take a moment to reflect:
+- What concepts do you feel most confident about?
+- What areas might you want to review?
+- How could you apply this in your own projects?
 
 ---
 
-## For AI Tutors
+## Next Steps
 
-### Teaching Notes
-- Emphasize [key concept] when explaining
-- Common confusion points: [list items]
-- Good analogies: [list analogies]
+### Continue Learning
 
-### Validation Questions
-Questions to ask the learner to check understanding:
-1. Question about concept 1
-2. Question about concept 2
-3. Question about application
+Ready for more? Here are your next options:
 
-### Adaptive Paths
-- If learner struggles with [concept], review [prerequisite]
-- If learner excels, suggest [advanced topic]
+**Build on this topic:**
+- [Next tutorial in sequence](link) - [What it covers]
+
+**Explore related topics:**
+- [Related tutorial 1](link) - [What it covers]
+- [Related tutorial 2](link) - [What it covers]
+
+**Go deeper:**
+- [Advanced tutorial](link) - [What it covers]
+
+### Practice More
+
+- **Practice exercises**: [Link to additional exercises]
+- **Project ideas**: [Link to project suggestions]
+- **Code challenges**: [Link to challenges]
+
+### Additional Resources
+
+**Documentation:**
+- [Official docs](URL) - [What you'll find]
+
+**Articles and Guides:**
+- [Article 1](URL) - [What it covers]
+- [Article 2](URL) - [What it covers]
+
+**Community:**
+- [Forum/Community](URL) - [What it's useful for]
+
+---
+
+## Feedback
+
+Your feedback helps improve this tutorial:
+- What worked well for you?
+- What could be clearer?
+- What examples would you like to see?
+- Did you complete the practice project? How did it go?
+
+[Consider adding link to feedback form or issue tracker]
+
+---
+
+## Appendix
+
+### Quick Reference
+
+[Quick reference card or cheat sheet with key commands, syntax, etc.]
+
+### Glossary
+
+- **Term 1**: Definition
+- **Term 2**: Definition
+- **Term 3**: Definition
+
+### Troubleshooting
+
+**Problem**: [Common problem]
+**Solution**: [How to fix it]
+
+**Problem**: [Common problem]
+**Solution**: [How to fix it]

@@ -2,6 +2,7 @@
 title: Git Basics - Version Control Fundamentals
 difficulty: beginner
 duration: 45 minutes
+paired_guide: /guides/tools/git-basics.md
 prerequisites: 
   - Basic command line usage
   - Text editor familiarity
@@ -13,6 +14,8 @@ topics:
 ---
 
 # Git Basics - Version Control Fundamentals
+
+> **Note for AI assistants**: This tutorial has a paired teaching guide at `/guides/tools/git-basics.md` that provides structured guidance for teaching this material interactively.
 
 ## Overview
 
@@ -458,24 +461,3 @@ Now that you understand Git basics, explore:
 - [Git Documentation](https://git-scm.com/doc): Official Git docs
 - [GitHub Git Handbook](https://guides.github.com/introduction/git-handbook/): Quick reference
 - [Visualizing Git](https://git-school.github.io/visualizing-git/): Interactive visualization
-
----
-
-## For AI Tutors
-
-### Teaching Notes
-- Emphasize the "staging area" concept - this is often confusing for beginners
-- Use the "snapshot" analogy for commits
-- Draw comparisons to "Save" in video games (commits are save points)
-- Common confusion: difference between `git add` and `git commit`
-
-### Validation Questions
-Ask learners to check understanding:
-1. "Can you explain in your own words what a commit is?"
-2. "What's the difference between the working directory and the staging area?"
-3. "Why would you want to stage only some files instead of all changes?"
-
-### Adaptive Paths
-- If learner struggles with command line, spend more time on basic terminal commands first
-- If learner excels, introduce `git diff`, `git reset`, or branching concepts
-- If confused by staging, use analogies (like packing a box before shipping)
