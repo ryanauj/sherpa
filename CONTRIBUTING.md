@@ -1,32 +1,32 @@
 # Contributing to Tides
 
-Thank you for your interest in contributing to Tides! This document provides guidelines for creating paired tutorials and guides that enable effective learning in multiple modes.
+Thank you for your interest in contributing to Tides! This document provides guidelines for creating paired routes and guides that enable effective learning in multiple modes.
 
 ## Philosophy
 
 Content in Tides follows a **dual structure**:
-- **Tutorials**: Human-readable learning materials
+- **Routes**: Human-readable learning materials
 - **Guides**: AI assistant teaching scripts
 
 Together, they enable three learning modes:
-1. **Self-paced**: Human reads tutorial alone
-2. **AI-guided**: AI teaches using guide without tutorial
-3. **Collaborative**: Human reads tutorial with AI assistance using guide
+1. **Self-paced**: Human reads route alone
+2. **AI-guided**: AI teaches using guide without route
+3. **Collaborative**: Human reads route with AI assistance using guide
 
 ## Core Principles
 
 All content should be:
-- **Paired**: Every tutorial has a matching guide (and vice versa)
-- **Aligned**: Tutorial and guide cover the same concepts in the same order
+- **Paired**: Every route has a matching guide (and vice versa)
+- **Aligned**: Route and guide cover the same concepts in the same order
 - **Optimized**: Each piece is optimized for its specific audience (human or AI)
 - **Practical**: Include real examples and hands-on exercises
 - **Iterative**: Designed to be improved over time based on usage
 
 ## Types of Content
 
-### Tutorials (Human-Focused)
+### Routes (Human-Focused)
 
-Learning materials designed for humans to read independently. Tutorials should:
+Learning materials designed for humans to read independently. Routes should:
 - Use clear, readable prose that explains concepts thoroughly
 - Include detailed code examples with step-by-step walkthroughs
 - Provide exercises with expandable hints and solutions
@@ -36,7 +36,7 @@ Learning materials designed for humans to read independently. Tutorials should:
 
 **Target audience**: Humans learning a topic by reading
 
-**Located in**: `/tutorials/[category]/[topic-name].md`
+**Located in**: `/routes/[category]/[topic-name].md`
 
 ### Guides (AI-Focused)
 
@@ -62,17 +62,17 @@ Decide what you want to teach:
 - What prerequisite knowledge is required?
 - How long will it take to learn?
 
-### Step 2: Create the Tutorial (Human-Focused)
+### Step 2: Create the Route (Human-Focused)
 
 1. **Copy the template:**
    ```bash
-   cp templates/tutorial-template.md tutorials/[category]/[topic-name].md
+   cp templates/route-template.md routes/[category]/[topic-name].md
    ```
 
 2. **Fill in the metadata:**
    ```yaml
    ---
-   title: Your Tutorial Title
+   title: Your Route Title
    difficulty: beginner|intermediate|advanced
    duration: X minutes
    paired_guide: /guides/[category]/[topic-name].md
@@ -118,10 +118,10 @@ Decide what you want to teach:
 2. **Fill in the metadata:**
    ```yaml
    ---
-   title: Your Tutorial Title
+   title: Your Route Title
    difficulty: beginner|intermediate|advanced
    duration: X minutes
-   paired_tutorial: /tutorials/[category]/[topic-name].md
+   paired_route: /routes/[category]/[topic-name].md
    topics:
      - Topic 1
      - Topic 2
@@ -159,7 +159,7 @@ Decide what you want to teach:
 
 ### Step 4: Ensure Alignment
 
-Check that your tutorial and guide:
+Check that your route and guide:
 - [ ] Have identical learning objectives
 - [ ] Cover the same concepts in the same order
 - [ ] Use the same examples (or complementary ones)
@@ -170,14 +170,14 @@ Check that your tutorial and guide:
 ### Step 5: Test Your Content
 
 Before submitting:
-1. **Test the tutorial independently**: Can someone learn from it alone?
+1. **Test the route independently**: Can someone learn from it alone?
 2. **Test the guide**: Can an AI effectively teach using it?
 3. **Test together**: Do they work well in collaborative mode?
 4. **Get feedback**: Have others review or try your content
 
 ## Content Structure Guidelines
 
-### Tutorial Structure (Human-Readable)
+### Route Structure (Human-Readable)
 
 ```markdown
 ---
@@ -303,7 +303,7 @@ Common issues and how to address them
 
 ## Style Guidelines
 
-### For Tutorials (Human-Focused)
+### For Routes (Human-Focused)
 
 **Writing Style:**
 - Use conversational, encouraging tone
@@ -340,7 +340,7 @@ Common issues and how to address them
 - Include strategies for different scenarios
 
 **Code Examples:**
-- Include same examples as tutorial
+- Include same examples as route
 - Add guidance on how to walk through them
 - Note what to emphasize
 - Explain common areas of confusion
@@ -349,7 +349,7 @@ Common issues and how to address them
 
 ### Before Submitting
 
-**Tutorial checklist:**
+**Route checklist:**
 - [ ] Clear learning objectives
 - [ ] Readable explanations without jargon
 - [ ] Working code examples (test them!)
@@ -364,7 +364,7 @@ Common issues and how to address them
 - [ ] Common misconceptions addressed
 - [ ] Adaptive strategies included
 - [ ] Exercise guidance (not just answers)
-- [ ] References paired tutorial in metadata
+- [ ] References paired route in metadata
 
 **Alignment checklist:**
 - [ ] Same learning objectives
@@ -376,7 +376,7 @@ Common issues and how to address them
 ### Submitting Your Content
 
 1. **Create a pull request** with:
-   - Both tutorial and guide files
+   - Both route and guide files
    - Clear description of what the content teaches
    - Note about target difficulty level
    - Any special requirements or dependencies
@@ -397,7 +397,7 @@ Common issues and how to address them
 
 When improving existing content:
 
-**For tutorials:**
+**For routes:**
 - Add clarifications where concepts are confusing
 - Improve examples if better ones exist
 - Add or improve exercises
@@ -412,7 +412,7 @@ When improving existing content:
 - Update timing estimates
 
 **For both:**
-- Maintain alignment between tutorial and guide
+- Maintain alignment between route and guide
 - Update both if you change core concepts
 - Document what you changed in your PR
 - Explain why the change improves learning
@@ -421,7 +421,7 @@ When improving existing content:
 
 If you need help:
 - Check the templates in `/templates/`
-- Look at existing examples in `/tutorials/` and `/guides/`
+- Look at existing examples in `/routes/` and `/guides/`
 - Open an issue to ask questions
 - Ask for feedback in pull request comments
 

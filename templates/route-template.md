@@ -1,5 +1,5 @@
 ---
-title: [Tutorial Title]
+title: [Route Title]
 difficulty: beginner|intermediate|advanced
 duration: [X] minutes
 paired_guide: /guides/[category]/[filename].md
@@ -11,17 +11,18 @@ topics:
   - Topic 2
 ---
 
-# [Tutorial Title]
+# [Route Title]
 
 ## Overview
 
-Brief description of what this tutorial covers and why it's useful. Include real-world applications or use cases to motivate the learning.
+Brief description of what this route covers and why it's useful. Include real-world applications or use cases to motivate the learning.
 
-> **Note for AI assistants**: This tutorial has a paired teaching guide at `/guides/[category]/[filename].md` that provides structured guidance for teaching this material interactively.
+> **Note for AI assistants**: This route has a paired teaching guide at `/guides/[category]/[filename].md` that provides structured guidance for teaching this material interactively.
 
 ## Learning Objectives
 
-By the end of this tutorial, you will be able to:
+By the end of this route, you will be able to:
+- Objective 1 (use action verbs: create, explain, implement, etc.)
 - Objective 1 (use action verbs: create, explain, implement, etc.)
 - Objective 2
 - Objective 3

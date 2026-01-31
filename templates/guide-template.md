@@ -1,18 +1,18 @@
 ---
-title: [Tutorial Title]
+title: [Route Title]
 difficulty: beginner|intermediate|advanced
 duration: [X] minutes
-paired_tutorial: /tutorials/[category]/[filename].md
+paired_route: /routes/[category]/[filename].md
 topics:
   - Topic 1
   - Topic 2
 ---
 
-# [Tutorial Title] - AI Teaching Guide
+# [Route Title] - AI Teaching Guide
 
 **Purpose**: This guide helps AI assistants teach this topic effectively. It provides a structured teaching flow, verification questions, and strategies for helping learners.
 
-**Paired Tutorial**: This guide corresponds to `/tutorials/[category]/[filename].md` which learners may be reading alongside.
+**Paired Route**: This guide corresponds to `/routes/[category]/[filename].md` which learners may be reading alongside.
 
 ---
 

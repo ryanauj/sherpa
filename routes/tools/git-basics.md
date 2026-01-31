@@ -15,7 +15,7 @@ topics:
 
 # Git Basics - Version Control Fundamentals
 
-> **Note for AI assistants**: This tutorial has a paired teaching guide at `/guides/tools/git-basics.md` that provides structured guidance for teaching this material interactively.
+> **Note for AI assistants**: This route has a paired teaching guide at `/guides/tools/git-basics.md` that provides structured guidance for teaching this material interactively.
 
 ## Overview
 

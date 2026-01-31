@@ -1,11 +1,11 @@
 # Templates
 
-This directory contains templates for creating paired tutorials and guides. The dual structure ensures content works effectively in all three learning modes.
+This directory contains templates for creating paired routes and guides. The dual structure ensures content works effectively in all three learning modes.
 
 ## Available Templates
 
-### tutorial-template.md (Human-Focused)
-Use this template for creating content that humans read independently. Tutorials should:
+### route-template.md (Human-Focused)
+Use this template for creating content that humans read independently. Routes should:
 - Explain concepts clearly in readable prose
 - Include detailed examples with explanations
 - Provide exercises with expandable hints and solutions
@@ -26,14 +26,14 @@ Use this template for creating teaching scripts for AI assistants. Guides should
 
 ## The Pairing Concept
 
-Each topic should have BOTH a tutorial and a guide:
+Each topic should have BOTH a route and a guide:
 - Same topic, same filename
-- Different directories (`tutorials/` vs `guides/`)
+- Different directories (`routes/` vs `guides/`)
 - Aligned content but optimized for different users
 
 **Example:**
 ```
-tutorials/tools/git-basics.md    ← Humans read this
+routes/tools/git-basics.md    ← Humans read this
 guides/tools/git-basics.md       ← AI assistants use this
 ```
 
@@ -45,9 +45,9 @@ Decide what you want to teach:
 - What concepts need to be covered?
 - What exercises will reinforce learning?
 
-### Step 2: Create the Tutorial First
+### Step 2: Create the Route First
 ```bash
-cp templates/tutorial-template.md tutorials/[category]/[topic-name].md
+cp templates/route-template.md routes/[category]/[topic-name].md
 ```
 
 Fill in:
@@ -70,19 +70,19 @@ Fill in:
 
 ### Step 4: Cross-Reference
 In both files, update the YAML front matter:
-- Tutorial: `paired_guide: /guides/[category]/[topic-name].md`
-- Guide: `paired_tutorial: /tutorials/[category]/[topic-name].md`
+- Route: `paired_guide: /guides/[category]/[topic-name].md`
+- Guide: `paired_route: /routes/[category]/[topic-name].md`
 
 ### Step 5: Align Content
 Make sure:
 - Both cover the same concepts in the same order
-- Exercises in the guide match exercises in the tutorial
+- Exercises in the guide match exercises in the route
 - Section names are similar (doesn't have to be exact)
 - Learning objectives are identical
 
 ## Tips for Creating Great Content
 
-### For Tutorials
+### For Routes
 - Write as if teaching a friend
 - Explain "why" not just "how"
 - Use analogies and real-world examples
@@ -106,7 +106,7 @@ Make sure:
 
 Before submitting paired content, verify:
 
-**Tutorial:**
+**Route:**
 - [ ] Clear learning objectives
 - [ ] Readable explanations without jargon (or jargon explained)
 - [ ] Working code examples
@@ -121,24 +121,24 @@ Before submitting paired content, verify:
 - [ ] Common misconceptions addressed
 - [ ] Adaptive strategies for different learners
 - [ ] Exercise guidance (not just answers)
-- [ ] References paired tutorial in front matter
+- [ ] References paired route in front matter
 
 **Alignment:**
 - [ ] Same learning objectives
 - [ ] Same concepts covered in same order
-- [ ] Exercises match between tutorial and guide
+- [ ] Exercises match between route and guide
 - [ ] Same examples or complementary ones
 
 ## Examples
 
 See these examples of paired content:
-- `tutorials/tools/git-basics.md` and `guides/tools/git-basics.md`
+- `routes/tools/git-basics.md` and `guides/tools/git-basics.md`
 
 ## Questions?
 
 If you're unsure about:
-- **What to put in tutorial vs guide**: Tutorial = content to read, Guide = how to teach
-- **How detailed to be**: Tutorial = very detailed, Guide = teaching strategy + key points
+- **What to put in route vs guide**: Route = content to read, Guide = how to teach
+- **How detailed to be**: Route = very detailed, Guide = teaching strategy + key points
 - **Whether content aligns**: Have someone review using one while you use the other
 
 See `/CONTRIBUTING.md` for more detailed guidelines, or open an issue to ask!

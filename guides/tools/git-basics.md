@@ -2,7 +2,7 @@
 title: Git Basics - Version Control Fundamentals
 difficulty: beginner
 duration: 45 minutes
-paired_tutorial: /tutorials/tools/git-basics.md
+paired_route: /routes/tools/git-basics.md
 topics:
   - Version Control
   - Git
@@ -14,7 +14,7 @@ topics:
 
 **Purpose**: This guide helps AI assistants teach Git fundamentals effectively through structured interaction.
 
-**Paired Tutorial**: This guide corresponds to `/tutorials/tools/git-basics.md` which learners may be reading alongside.
+**Paired Route**: This guide corresponds to `/routes/tools/git-basics.md` which learners may be reading alongside.
 
 ---
 
