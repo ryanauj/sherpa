@@ -1,5 +1,9 @@
 # Sherpa: Collaborative Learning Routes & Guides
 
+<img width="1408" height="768" alt="IMG_1570" src="https://github.com/user-attachments/assets/dc23d51e-ab72-4b9b-82d1-e9eafbc2a1da" />
+
+**Sherpa** helps you improve at your own pace - with or without AI interaction.
+
 Welcome to **Sherpa** - a repository for hosting static learning routes in markdown format. Think of learning as climbing a mountain: routes are the paths to follow, and sherpas (AI assistants) help guide you along the way.
 
 ## Vision
