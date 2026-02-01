@@ -1,6 +1,6 @@
-# Tides: Collaborative Learning Routes & Guides
+# Sherpa: Collaborative Learning Routes & Guides
 
-Welcome to **Tides** - a repository for hosting static learning routes and guides in markdown format. Think of learning as climbing a mountain: there are many paths (routes) to the summit, and experienced guides (AI assistants) can help you navigate them. These resources are designed to be used collaboratively by both AI assistants and humans together, while remaining accessible to either separately.
+Welcome to **Sherpa** - a repository for hosting static learning routes and guides in markdown format. Think of learning as climbing a mountain: there are many paths (routes) to the summit, and experienced guides (AI assistants) can help you navigate them. These resources are designed to be used collaboratively by both AI assistants and humans together, while remaining accessible to either separately.
 
 ## Vision
 
@@ -13,7 +13,7 @@ This repository aims to:
 ## Structure
 
 ```
-tides/
+sherpa/
 ├── routes/             # Human-readable learning materials (the paths up the mountain)
 │   ├── programming/    # Programming routes
 │   ├── tools/          # Tool-specific routes

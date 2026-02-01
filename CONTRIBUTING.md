@@ -1,10 +1,10 @@
-# Contributing to Tides
+# Contributing to Sherpa
 
-Thank you for your interest in contributing to Tides! This document provides guidelines for creating paired routes and guides that enable effective learning in multiple modes.
+Thank you for your interest in contributing to Sherpa! This document provides guidelines for creating paired routes and guides that enable effective learning in multiple modes.
 
 ## Philosophy
 
-Content in Tides follows a **dual structure**:
+Content in Sherpa follows a **dual structure**:
 - **Routes**: Human-readable learning materials
 - **Guides**: AI assistant teaching scripts
 
