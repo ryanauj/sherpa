@@ -1,12 +1,13 @@
 ---
 title: Git Basics - Version Control Fundamentals
-difficulty: beginner
-duration: 45 minutes
 topics:
   - Version Control
   - Git
   - Repositories
   - Commits
+related_routes:
+  - git-branching
+  - git-collaboration
 ---
 
 # Git Basics - Route Map
@@ -33,36 +34,30 @@ Before starting this route:
 
 ## Route Structure
 
-### 1. Understanding Version Control (5 min)
+### 1. Understanding Version Control
 - What is version control?
 - Why use Git?
 - Basic Git concepts
 
-### 2. Repository Basics (10 min)
+### 2. Repository Basics
 - Creating your first repository
 - Understanding the `.git` folder
 - Using `git status`
 
-### 3. Tracking Changes (15 min)
+### 3. Tracking Changes
 - The Git workflow
 - Staging files with `git add`
 - Making commits with `git commit`
 - Writing good commit messages
 
-### 4. Viewing History (5 min)
+### 4. Viewing History
 - Using `git log`
 - Understanding commit history
 
-### 5. Practice Project (10 min)
+### 5. Practice Project
 - Create a journal repository
 - Make multiple commits
 - Review your work
-
-## Estimated Time
-
-- **Total**: 45 minutes
-- **Hands-on practice**: 25 minutes
-- **Reading/learning**: 20 minutes
 
 ## Learning Modes
 

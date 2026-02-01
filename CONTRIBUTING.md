@@ -1,323 +1,237 @@
 # Contributing to Sherpa
 
-Thank you for your interest in contributing to Sherpa! This document provides guidelines for creating paired routes and guides that enable effective learning in multiple modes.
+Thank you for your interest in contributing to Sherpa! This document provides guidelines for creating routes with their three-file structure (map, sherpa, guide) that enable flexible AI-human learning.
 
 ## Philosophy
 
-Content in Sherpa follows a **dual structure**:
-- **Routes**: Human-readable learning materials
-- **Guides**: AI assistant teaching scripts
+Content in Sherpa follows a **route container approach**:
+- **Routes**: Complete learning paths organized as subdirectories
+- Each route contains three complementary files optimized for different uses
 
 Together, they enable three learning modes:
-1. **Self-paced**: Human reads route alone
-2. **AI-guided**: AI teaches using guide without route
-3. **Collaborative**: Human reads route with AI assistance using guide
+1. **Self-paced**: Human reads guide.md alone
+2. **AI-guided**: AI teaches using sherpa.md
+3. **Collaborative**: Human reads guide.md with AI using sherpa.md
 
 ## Core Principles
 
 All content should be:
-- **Paired**: Every route has a matching guide (and vice versa)
-- **Aligned**: Route and guide cover the same concepts in the same order
-- **Optimized**: Each piece is optimized for its specific audience (human or AI)
+- **Complete**: Each route is a self-contained learning path
+- **Triple-file**: Every route has map, sherpa, and guide files
+- **Aligned**: All three files cover the same concepts cohesively
 - **Practical**: Include real examples and hands-on exercises
 - **Iterative**: Designed to be improved over time based on usage
 
-## Types of Content
+## Route Structure
 
-### Routes (Human-Focused)
+Each route lives in a subdirectory under `/routes/` with three files:
 
-Learning materials designed for humans to read independently. Routes should:
-- Use clear, readable prose that explains concepts thoroughly
-- Include detailed code examples with step-by-step walkthroughs
-- Provide exercises with expandable hints and solutions
-- Have self-check points to validate understanding
-- Be self-contained (learner doesn't need external help to understand)
-- Build from simple to complex progressively
+### map.md - Route Overview
+The high-level "map" showing the learning journey:
+- Learning objectives
+- Prerequisites
+- Route structure (sections, no time estimates)
+- Learning modes available
+- Related routes and resources
 
-**Target audience**: Humans learning a topic by reading
+**Purpose**: Syllabus that both humans and AI can reference
 
-**Located in**: `/routes/[category]/[topic-name].md`
+### sherpa.md - AI Teaching Script
+Instructions for AI assistants acting as guides:
+- Teaching overview and objectives
+- Structured teaching flow by section
+- Verification questions (multiple choice and explanation-based)
+- Common misconceptions and clarifications
+- Adaptive strategies for different learners
+- Exercise guidance with progressive hints
+- Learner preference configuration options
 
-### Guides (AI-Focused)
+**Purpose**: Enable AI to teach effectively and adapt to learners
 
-Teaching scripts designed for AI assistants to teach interactively. Guides should:
-- Provide structured teaching flow with timing estimates
-- Include specific verification questions to ask learners
-- List common misconceptions and how to address them
-- Offer adaptive strategies for different learner levels
-- Give guidance on presenting and helping with exercises
-- Suggest how to explain concepts multiple ways
+### guide.md - Human Learning Content
+Self-contained learning material for humans:
+- Clear explanations with examples
+- Detailed code walkthroughs
+- Hands-on exercises with solutions
+- Self-check points
+- Practice projects
 
-**Target audience**: AI assistants teaching the topic
+**Purpose**: Enable self-paced learning without AI assistance
 
-**Located in**: `/guides/[category]/[topic-name].md`
+## Creating a New Route
 
-## Creating Paired Content
-
-### Step 1: Choose Your Topic
+### Step 1: Plan Your Route
 
 Decide what you want to teach:
 - What are the learning objectives?
-- Who is the target audience (beginner/intermediate/advanced)?
 - What prerequisite knowledge is required?
-- How long will it take to learn?
+- What related routes exist?
+- What tools or techniques will you reference?
 
-### Step 2: Create the Route (Human-Focused)
+### Step 2: Create Route Directory
 
-1. **Copy the template:**
-   ```bash
-   cp templates/route-template.md routes/[category]/[topic-name].md
-   ```
+```bash
+mkdir -p routes/your-topic
+```
 
-2. **Fill in the metadata:**
+### Step 3: Create the Three Files
+
+Use templates from `/techniques/`:
+
+```bash
+cp techniques/map-template.md routes/your-topic/map.md
+cp techniques/sherpa-template-v1.md routes/your-topic/sherpa.md
+cp techniques/guide-template-v1.md routes/your-topic/guide.md
+```
+
+### Step 4: Fill in map.md
+
+1. **Add metadata** (no difficulty or duration):
    ```yaml
    ---
    title: Your Route Title
-   difficulty: beginner|intermediate|advanced
-   duration: X minutes
-   paired_guide: /guides/[category]/[topic-name].md
-   prerequisites:
-     - Prerequisite 1
-     - Prerequisite 2
    topics:
      - Topic 1
      - Topic 2
+   related_routes:
+     - related-route-1
+     - related-route-2
    ---
    ```
 
-3. **Write clear explanations:**
+2. **Write route structure** (sections without time estimates)
+3. **List prerequisites** clearly
+4. **Reference tools and techniques** used
+
+### Step 5: Fill in guide.md (Human-Focused)
+
+1. **Add metadata**:
+   ```yaml
+   ---
+   title: Your Route Title
+   route_map: /routes/your-topic/map.md
+   paired_sherpa: /routes/your-topic/sherpa.md
+   prerequisites:
+     - Prerequisite 1
+   topics:
+     - Topic 1
+   ---
+   ```
+
+2. **Write clear explanations**:
    - Explain concepts in readable prose
    - Use analogies and real-world examples
    - Define technical terms on first use
-   - Break down complex ideas into digestible parts
 
-4. **Include detailed examples:**
+3. **Include detailed examples**:
    - Provide complete, runnable code
-   - Walk through the code step-by-step
+   - Walk through code step-by-step
    - Show expected output
-   - Explain what each part does and why
 
-5. **Create exercises:**
+4. **Create exercises**:
    - Clear task descriptions
    - Progressive hints in collapsible sections
    - Complete solutions with explanations
-   - Self-check lists after each section
 
-6. **Add a practice project:**
-   - Integrates all concepts learned
-   - Clear requirements and getting started steps
-   - Example solution in collapsible section
+### Step 6: Fill in sherpa.md (AI-Focused)
 
-### Step 3: Create the Paired Guide (AI-Focused)
-
-1. **Copy the template:**
-   ```bash
-   cp templates/guide-template.md guides/[category]/[topic-name].md
-   ```
-
-2. **Fill in the metadata:**
+1. **Add metadata**:
    ```yaml
    ---
    title: Your Route Title
-   difficulty: beginner|intermediate|advanced
-   duration: X minutes
-   paired_route: /routes/[category]/[topic-name].md
+   route_map: /routes/your-topic/map.md
+   paired_guide: /routes/your-topic/guide.md
    topics:
      - Topic 1
-     - Topic 2
    ---
    ```
 
-3. **Structure the teaching flow:**
-   - Break content into timed sections
-   - For each section, describe:
+2. **Document learner preferences**:
+   - Teaching tone options
+   - Assessment format (multiple choice, explanation, mixed)
+   - Pacing preferences
+
+3. **Structure the teaching flow**:
+   - Break content into clear sections
+   - For each section describe:
      - Core concept to teach
-     - How to explain it (including analogies)
+     - How to explain it
      - Example to present
-     - Verification questions to ask
+     - Verification questions (both types)
 
-4. **List common misconceptions:**
+4. **Include assessment strategies**:
+   - Multiple choice questions for quick checks
+   - Explanation questions for deeper understanding
+   - Mixed approach recommendations
+
+5. **Add common misconceptions**:
    - What learners often misunderstand
-   - How to clarify these misconceptions
-   - Alternative explanations if first doesn't work
+   - How to clarify
 
-5. **Provide verification questions:**
-   - Specific questions to check understanding
-   - What good answers sound like
-   - What to do if learner struggles
-
-6. **Add adaptive strategies:**
+6. **Provide adaptive strategies**:
    - How to help struggling learners
    - How to challenge excelling learners
-   - Different approaches for different learning styles
 
-7. **Include exercise guidance:**
-   - How to present the exercise
-   - Progressive hints to provide
-   - How to review learner's solutions
-   - What to emphasize in the solution
+### Step 7: Ensure Alignment
 
-### Step 4: Ensure Alignment
+Check that all three files:
+- [ ] Have consistent learning objectives
+- [ ] Cover the same concepts cohesively
+- [ ] Use compatible examples
+- [ ] Reference each other correctly
+- [ ] Are well-structured and complete
 
-Check that your route and guide:
-- [ ] Have identical learning objectives
-- [ ] Cover the same concepts in the same order
-- [ ] Use the same examples (or complementary ones)
-- [ ] Have matching exercises
-- [ ] Reference each other in the metadata
-- [ ] Have similar section structure (doesn't need to be exact)
-
-### Step 5: Test Your Content
+### Step 8: Test Your Route
 
 Before submitting:
-1. **Test the route independently**: Can someone learn from it alone?
-2. **Test the guide**: Can an AI effectively teach using it?
-3. **Test together**: Do they work well in collaborative mode?
+1. **Test guide.md independently**: Can someone learn from it alone?
+2. **Test with AI using sherpa.md**: Can an AI effectively teach using it?
+3. **Test collaborative mode**: Do they work well together?
 4. **Get feedback**: Have others review or try your content
 
-## Content Structure Guidelines
+## Supporting Resources
 
-### Route Structure (Human-Readable)
+### Adding Tools
 
-```markdown
----
-[metadata]
----
+Tools are reusable scripts, visualizations, quizzes, or executables in `/tools/`.
 
-# Title
-
-## Overview
-Brief description and motivation
-
-## Learning Objectives
-Clear, actionable objectives
-
-## Prerequisites
-What learners need to know first
-
-## Setup
-Installation and configuration
-
----
-
-## Section 1: [Concept]
-
-### What is [Concept]?
-Clear explanation with analogy
-
-### Why [Concept] Matters
-Importance and use cases
-
-### Understanding [Concept]
-Detailed explanation with examples
-
-### Key Points to Remember
-Summary of important takeaways
-
-### Exercise 1.1
-Task, hints, solution
-
-### Self-Check
-Checklist before moving on
-
----
-
-[More sections...]
-
----
-
-## Practice Project
-Comprehensive project using all concepts
-
-## Summary
-Key takeaways and skills gained
-
-## Next Steps
-Where to go from here
+Create organized subdirectories:
+```
+tools/
+├── git-visualizer/
+├── python-practice-quiz/
+└── terminal-simulator/
 ```
 
-### Guide Structure (AI Teaching Script)
+Each tool should have clear documentation.
 
-```markdown
----
-[metadata]
----
+### Adding Techniques
 
-# Title - AI Teaching Guide
+Techniques are templates, patterns, and best practices in `/techniques/`.
 
-## Teaching Overview
-Learning objectives, prerequisites, time estimates
-
----
-
-## Teaching Flow
-
-### Introduction (X min)
-- What to cover
-- Opening questions to assess level
-- How to adapt based on responses
-
----
-
-### Section 1: [Concept] (X min)
-
-**Core Concept to Teach:**
-Brief description
-
-**How to Explain:**
-Step-by-step teaching approach
-
-**Example to Present:**
-Code example with walkthrough guidance
-
-**Common Misconceptions:**
-What learners misunderstand and corrections
-
-**Verification Questions:**
-Questions to check understanding
-
-**If they struggle:**
-Strategies to help
-
-**Exercise 1.1:**
-How to present and guide through it
-
----
-
-[More sections...]
-
----
-
-## Practice Project (X min)
-How to guide learners through the project
-
-## Wrap-Up (X min)
-Review, assess confidence, suggest next steps
-
-## Adaptive Teaching Strategies
-Different approaches for different situations
-
-## Troubleshooting
-Common issues and how to address them
-```
+- Document new patterns you discover
+- Create reusable templates
+- Share best practices for teaching/learning
+- Include communication tips for AI-human collaboration
 
 ## Style Guidelines
 
-### For Routes (Human-Focused)
+### For map.md
+
+- Keep it concise and high-level
+- No time estimates (subjective and inaccurate)
+- No difficulty ratings (subjective)
+- Focus on structure and relationships
+- Use clear section headings
+
+### For guide.md (Human-Focused)
 
 **Writing Style:**
-- Use conversational, encouraging tone
-- Write in second person ("you")
-- Keep sentences clear and concise
-- Use active voice
+- Conversational, encouraging tone
+- Second person ("you")
+- Clear and concise sentences
+- Active voice
 - Explain "why" not just "how"
-
-**Formatting:**
-- Use `#` for title, `##` for major sections, `###` for subsections
-- Use code blocks with language specification: ```python
-- Use expandable sections for hints: `<details><summary>`
-- Use **bold** for emphasis, `code` for inline code
-- Use numbered lists only when order matters
 
 **Code Examples:**
 - Complete and runnable
@@ -325,104 +239,84 @@ Common issues and how to address them
 - Show expected output
 - Start simple, build complexity
 
-### For Guides (AI Teaching Scripts)
+### For sherpa.md (AI Teaching Scripts)
 
 **Writing Style:**
-- Write as teaching instructions for AI
-- Use imperative tone ("Ask the learner...", "Explain that...")
+- Write as instructions for AI
+- Imperative tone ("Ask...", "Explain...")
 - Be specific about what to say and do
-- Include timing and pacing guidance
+- Include multiple assessment formats
 
 **Content:**
-- Break teaching into clear sections with time estimates
-- Provide specific questions, not just "check understanding"
-- List multiple ways to explain difficult concepts
-- Include strategies for different scenarios
+- Break teaching into clear sections (no time estimates)
+- Provide specific questions, both multiple choice and explanation
+- List multiple ways to explain concepts
+- Include configuration options for learner preferences
 
-**Code Examples:**
-- Include same examples as route
-- Add guidance on how to walk through them
-- Note what to emphasize
-- Explain common areas of confusion
+## Configuration Files
+
+Routes can reference a `.sherpa-config.yml` file (gitignored) where learners specify preferences:
+
+```yaml
+teaching:
+  tone: objective|encouraging|humorous
+  explanation_depth: concise|balanced|detailed
+  pacing: learner-led|balanced|structured
+
+assessment:
+  quiz_type: multiple_choice|explanation|mixed
+  quiz_frequency: after_each_section|after_major_topics|end_of_route
+  feedback_style: immediate|summary|detailed
+```
+
+Default to objective tone and mixed assessments when no config exists.
 
 ## Review Process
 
 ### Before Submitting
 
 **Route checklist:**
-- [ ] Clear learning objectives
-- [ ] Readable explanations without jargon
-- [ ] Working code examples (test them!)
-- [ ] Exercises with hints and solutions
-- [ ] Self-check points throughout
-- [ ] Practice project
-- [ ] References paired guide in metadata
-
-**Guide checklist:**
-- [ ] Structured teaching flow with time estimates
-- [ ] Specific verification questions
-- [ ] Common misconceptions addressed
-- [ ] Adaptive strategies included
-- [ ] Exercise guidance (not just answers)
-- [ ] References paired route in metadata
-
-**Alignment checklist:**
-- [ ] Same learning objectives
-- [ ] Same concepts in same order
-- [ ] Exercises match
-- [ ] Similar examples or complementary ones
-- [ ] Cross-referenced in metadata
+- [ ] All three files created (map, sherpa, guide)
+- [ ] Metadata complete and consistent
+- [ ] No difficulty or duration fields
+- [ ] No time estimates in sections
+- [ ] Prerequisites clearly stated
+- [ ] Related routes referenced
+- [ ] Working code examples
+- [ ] Exercises with solutions
+- [ ] Assessment questions (multiple formats)
 
 ### Submitting Your Content
 
-1. **Create a pull request** with:
-   - Both route and guide files
-   - Clear description of what the content teaches
-   - Note about target difficulty level
-   - Any special requirements or dependencies
-
+1. **Create a pull request** with all three files
 2. **In your PR description**, mention:
    - What topic you're covering
    - Who the target audience is
    - How you tested the content
-   - Any questions or areas where you want feedback
+   - Related routes or dependencies
 
 3. **Review process**:
-   - Maintainers will review both files
+   - Maintainers will review all three files
    - May ask for clarifications or changes
-   - Might test content with learners
-   - Will merge when both files are ready
+   - Will test with learners if possible
+   - Will merge when complete
 
 ## Improving Existing Content
 
-When improving existing content:
-
-**For routes:**
-- Add clarifications where concepts are confusing
-- Improve examples if better ones exist
-- Add or improve exercises
-- Fix errors or outdated information
-- Improve readability
-
-**For guides:**
-- Add verification questions if missing
-- Improve teaching strategies based on experience
-- Add common misconceptions discovered from teaching
-- Enhance adaptive strategies
-- Update timing estimates
-
-**For both:**
-- Maintain alignment between route and guide
-- Update both if you change core concepts
-- Document what you changed in your PR
+When improving existing routes:
+- Maintain alignment across all three files
+- Update related files together
+- Document changes in your PR
 - Explain why the change improves learning
+- Add communication tips if you discover good patterns
 
 ## Questions?
 
 If you need help:
-- Check the templates in `/templates/`
-- Look at existing examples in `/routes/` and `/guides/`
+- Check templates in `/techniques/`
+- Look at examples in `/routes/`
+- Review tools in `/tools/`
 - Open an issue to ask questions
-- Ask for feedback in pull request comments
+- Ask for feedback in PR comments
 
 Thank you for helping make learning more accessible and effective!

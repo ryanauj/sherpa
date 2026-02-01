@@ -70,9 +70,17 @@ Read guide.md while an AI assistant helps using sherpa.md for guidance.
 ## Tools & Techniques
 
 - **Tools**: Reusable scripts, visualizations, quizzes, and interactive resources
-- **Techniques**: Templates, patterns, and best practices for creating content
+- **Techniques**: Templates, patterns, best practices for creating content, and communication tips for effective AI-human collaboration
 
 These resources can be referenced from any route.
+
+### Communication Tips
+
+Routes, sherpas, and guides can include tips and prompts to help AI assistants and humans communicate more effectively:
+
+- **For humans**: Prompts to ask when stuck, ways to request different explanations, how to pace learning
+- **For AI**: Strategies to check understanding, adapt teaching style, provide appropriate hints
+- **For both**: Best practices for collaborative learning, effective question formats, feedback mechanisms
 
 ## Contributing
 
@@ -87,8 +95,8 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 1. Create a subdirectory: `routes/your-topic/`
 2. Use templates from `techniques/`:
    - `map-template.md` → `map.md`
-   - `sherpa-template-old.md` → `sherpa.md`
-   - `guide-template-old.md` → `guide.md`
+   - `sherpa-template-v1.md` → `sherpa.md`
+   - `guide-template-v1.md` → `guide.md`
 3. Fill in all three files with aligned content
 4. Reference tools and techniques as needed
 

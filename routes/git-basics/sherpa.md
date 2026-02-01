@@ -1,7 +1,5 @@
 ---
 title: Git Basics - Version Control Fundamentals
-difficulty: beginner
-duration: 45 minutes
 route_map: /routes/git-basics/map.md
 paired_guide: /routes/git-basics/guide.md
 topics:
@@ -38,11 +36,55 @@ Before starting, verify the learner has:
 
 **If prerequisites are missing**: Help them install Git first. If command line skills are weak, provide a 5-minute primer on basic navigation.
 
-### Estimated Time
-- 10 minutes for introduction and setup
-- 25 minutes for core Git concepts
-- 10 minutes for practice project
-- Total: ~45 minutes
+### Learner Preferences Configuration
+
+Learners can configure their preferred learning style by creating a `.sherpa-config.yml` file in the repository root (gitignored by default). Configuration options include:
+
+**Teaching Style:**
+- `tone`: objective, encouraging, humorous (default: objective and respectful)
+- `explanation_depth`: concise, balanced, detailed
+- `pacing`: learner-led, balanced, structured
+
+**Assessment Format:**
+- `quiz_type`: multiple_choice, explanation, mixed (default: mixed)
+- `quiz_frequency`: after_each_section, after_major_topics, end_of_route
+- `feedback_style`: immediate, summary, detailed
+
+**Example `.sherpa-config.yml`:**
+```yaml
+teaching:
+  tone: encouraging
+  explanation_depth: balanced
+  pacing: learner-led
+
+assessment:
+  quiz_type: mixed
+  quiz_frequency: after_major_topics
+  feedback_style: immediate
+```
+
+If no configuration file exists, use defaults (objective tone, mixed assessments, balanced pacing).
+
+### Assessment Strategies
+
+Use a combination of assessment types to verify understanding:
+
+**Multiple Choice Questions:**
+- Present 3-4 answer options
+- Include one correct answer and plausible distractors
+- Good for checking factual knowledge quickly
+- Example: "Which command initializes a new Git repository? A) git start B) git init C) git create D) git new"
+
+**Explanation Questions:**
+- Ask learner to explain concepts in their own words
+- Assess deeper understanding and ability to apply knowledge
+- Good for verifying comprehension, not just memorization
+- Example: "Can you explain what happens when you run 'git commit'?"
+
+**Mixed Approach (Recommended):**
+- Use multiple choice for quick checks after introducing new terms/commands
+- Use explanation questions for core concepts and after completing sections
+- Adapt based on learner responses and confidence level
 
 ---
 

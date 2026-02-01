@@ -1,7 +1,5 @@
 ---
 title: Git Basics - Version Control Fundamentals
-difficulty: beginner
-duration: 45 minutes
 route_map: /routes/git-basics/map.md
 paired_sherpa: /routes/git-basics/sherpa.md
 prerequisites: 
