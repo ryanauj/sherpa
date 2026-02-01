@@ -2,7 +2,8 @@
 title: Git Basics - Version Control Fundamentals
 difficulty: beginner
 duration: 45 minutes
-paired_route: /routes/tools/git-basics.md
+route_map: /routes/git-basics/map.md
+paired_guide: /routes/git-basics/guide.md
 topics:
   - Version Control
   - Git
@@ -10,11 +11,12 @@ topics:
   - Commits
 ---
 
-# Git Basics - AI Teaching Guide
+# Git Basics - Sherpa (AI Teaching Guide)
 
-**Purpose**: This guide helps AI assistants teach Git fundamentals effectively through structured interaction.
+**Purpose**: This sherpa guide helps AI assistants teach Git fundamentals effectively through structured interaction.
 
-**Paired Route**: This guide corresponds to `/routes/tools/git-basics.md` which learners may be reading alongside.
+**Route Map**: See `/routes/git-basics/map.md` for the high-level overview of this route.
+**Paired Guide**: The human-focused content is at `/routes/git-basics/guide.md`.
 
 ---
 

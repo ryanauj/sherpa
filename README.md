@@ -1,92 +1,92 @@
 # Sherpa: Collaborative Learning Routes & Guides
 
-Welcome to **Sherpa** - a repository for hosting static learning routes and guides in markdown format. Think of learning as climbing a mountain: there are many paths (routes) to the summit, and experienced guides (AI assistants) can help you navigate them. These resources are designed to be used collaboratively by both AI assistants and humans together, while remaining accessible to either separately.
+Welcome to **Sherpa** - a repository for hosting static learning routes in markdown format. Think of learning as climbing a mountain: routes are the paths to follow, and sherpas (AI assistants) help guide you along the way.
 
 ## Vision
 
 This repository aims to:
 - Document efficient learning paths and processes
 - Enable iteration and improvement of routes over time
-- Provide clear, structured guides that both humans can understand and AI can effectively use
+- Provide resources that both humans and AI can effectively use
 - Foster a community of learners sharing best practices
 
 ## Structure
 
 ```
 sherpa/
-├── routes/             # Human-readable learning materials (the paths up the mountain)
-│   ├── programming/    # Programming routes
-│   ├── tools/          # Tool-specific routes
-│   └── concepts/       # Conceptual routes
-├── guides/             # AI assistant teaching scripts (the sherpa's knowledge)
-│   ├── programming/    # Programming teaching guides
-│   ├── tools/          # Tool-specific teaching guides
-│   └── concepts/       # Conceptual teaching guides
-└── templates/          # Templates for creating new content
+├── routes/             # Learning routes (topic containers)
+│   ├── git-basics/
+│   │   ├── map.md      # Route overview/syllabus
+│   │   ├── sherpa.md   # AI teaching script
+│   │   └── guide.md    # Human learning content
+│   └── ...
+├── tools/              # Reusable scripts, visualizations, quizzes
+└── techniques/         # Templates, patterns, best practices
 ```
 
-## The Dual Structure
+## Route Structure
 
-**Routes** and **Guides** are designed to work together as paired content:
+Each route is a complete learning path organized in a subdirectory with three files:
 
-- **Routes** are human-readable documents that learners can read and work through at their own pace. They contain explanations, examples, and exercises - the documented path up the mountain.
-- **Guides** are AI assistant teaching scripts that provide a structured approach for AI to tutor a human through the same material. They include topics to cover, questions to ask, and ways to verify understanding - the sherpa's knowledge for helping climbers.
+### map.md - Route Overview
+The high-level "map" of the learning journey:
+- Learning objectives
+- Prerequisites
+- Route structure with timing
+- Available learning modes
+- Related resources
 
-Each topic should have both a route (for humans) and a guide (for AI assistants), aligned in structure and content.
+### sherpa.md - AI Teaching Script
+For AI assistants acting as guides:
+- Structured teaching flow
+- Verification questions
+- Common misconceptions
+- Adaptive strategies
+- Exercise guidance
+
+### guide.md - Human Learning Content
+For humans learning independently:
+- Clear explanations
+- Detailed examples
+- Hands-on exercises
+- Self-check points
+- Practice projects
 
 ## Three Learning Modes
 
-### Mode 1: Self-Paced (Human Only)
-The learner reads the route independently without AI assistance.
-- Browse the `routes/` directory
-- Choose a topic and follow the content
-- Complete exercises and practice at your own pace
+### Mode 1: Self-Paced
+Read guide.md independently at your own pace.
 
-### Mode 2: AI-Guided (AI + Human Interactive)
-The AI assistant uses the guide to teach, without the human reading the route directly.
-- AI references the guide in `guides/` directory
-- AI covers topics in order, asks verification questions
-- Human learns through conversation and exercises
-- AI adapts based on human's responses
+### Mode 2: AI-Guided
+Learn through conversation with an AI assistant using sherpa.md as their teaching script.
 
-### Mode 3: Collaborative (AI + Human + Route)
-The human reads the route while the AI assists using the guide.
-- Human works through the route
-- AI follows along using the paired guide
-- Human asks questions, AI provides clarification
-- AI asks verification questions from the guide
-- Both work together through exercises
+### Mode 3: Collaborative  
+Read guide.md while an AI assistant helps using sherpa.md for guidance.
+
+## Tools & Techniques
+
+- **Tools**: Reusable scripts, visualizations, quizzes, and interactive resources
+- **Techniques**: Templates, patterns, and best practices for creating content
+
+These resources can be referenced from any route.
 
 ## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
-- Creating paired routes and guides
-- Structuring content for self-paced learning (routes)
-- Structuring teaching scripts for AI assistants (guides)
-- Ensuring routes and guides align with each other
+- Creating new routes with map, sherpa, and guide files
+- Adding tools and techniques
 - Testing content with learners
+- Maintaining quality and consistency
 
-## Creating Content
+## Creating a New Route
 
-### Creating a Route (Human-Focused)
-Use the template in `templates/route-template.md` to create content that humans can read independently. Key elements:
-- **Clear explanations**: Concepts explained in readable prose
-- **Examples**: Practical, runnable code with explanations
-- **Exercises**: Hands-on practice with solutions
-- **Self-contained**: Learner can understand without external help
-
-### Creating a Guide (AI-Focused)
-Use the template in `templates/guide-template.md` to create teaching scripts for AI assistants. Key elements:
-- **Teaching flow**: Structured progression of topics
-- **Questions to ask**: Verification questions at checkpoints
-- **Common misconceptions**: What to watch for and clarify
-- **Adaptive strategies**: How to help if learner struggles
-- **Exercise guidance**: How to present and help with exercises
-
-### Pairing Content
-Each route should have a corresponding guide with the same filename in the parallel directory structure. For example:
-- `routes/tools/git-basics.md` pairs with `guides/tools/git-basics.md`
-- Both cover the same material, but optimized for different modes of learning
+1. Create a subdirectory: `routes/your-topic/`
+2. Use templates from `techniques/`:
+   - `map-template.md` → `map.md`
+   - `sherpa-template-old.md` → `sherpa.md`
+   - `guide-template-old.md` → `guide.md`
+3. Fill in all three files with aligned content
+4. Reference tools and techniques as needed
 
 ## License
 

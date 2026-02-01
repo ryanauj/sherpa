@@ -1,53 +1,62 @@
-# Routes - Human-Readable Learning Materials
+# Routes
 
-This directory contains **Routes** designed for humans to read and work through at their own pace. Each Route corresponds to a guide in the `/guides` directory that AI assistants can use for teaching.
-
-## Purpose
-
-Routes are self-contained learning materials with:
-- Clear explanations in readable prose
-- Practical examples with detailed walkthroughs
-- Hands-on exercises with hints and solutions
-- Self-check points to validate understanding
-- Practice projects to apply concepts
+This directory contains learning routes - each route is a complete learning path for a specific topic.
 
 ## Structure
 
-- **programming/** - Routes for programming languages (Python, JavaScript, etc.)
-- **tools/** - Routes for specific tools and frameworks (Git, Docker, etc.)
-- **concepts/** - Routes for theoretical concepts (Algorithms, Design Patterns, etc.)
+Each route is organized as a subdirectory containing three key files:
 
-## How to Use Routes
+```
+routes/
+├── git-basics/
+│   ├── map.md       # High-level route overview/syllabus
+│   ├── sherpa.md    # AI assistant teaching script
+│   └── guide.md     # Human-focused learning content
+├── python-basics/
+└── ...
+```
 
-### Self-Paced Learning (No AI)
-1. Choose a Route that matches your learning goals
-2. Read through each section carefully
-3. Try the examples yourself
-4. Complete all exercises
-5. Build the practice project
-6. Use self-check lists to validate understanding
+## The Three Files
 
-### With AI Assistance
-1. Open the Route you want to learn
-2. Tell the AI assistant which Route you're working on
-3. Read sections of the Route
-4. Ask the AI questions about confusing parts
-5. Work through exercises with AI support when needed
-6. The AI will follow along using the paired guide
+### map.md - Route Overview
+The "map" provides a high-level view of the learning route:
+- Learning objectives
+- Prerequisites
+- Route structure (sections and timing)
+- Learning modes available
+- Related tools and techniques
 
-### AI-Led Learning (Without Reading)
-1. Tell the AI assistant what you want to learn
-2. The AI will use the teaching guide to teach you
-3. Learn through conversation and guided exercises
-4. The AI may reference the Route for additional context
-5. You can always read the Route later for review
+Think of this as the syllabus or trail map that both humans and AI can reference.
 
-## Creating a Route
+### sherpa.md - AI Teaching Script
+The "sherpa" is for AI assistants acting as guides:
+- Structured teaching flow with timing
+- Verification questions to assess understanding
+- Common misconceptions to address
+- Adaptive strategies for different learners
+- Exercise guidance and hints
 
-See the template in `/templates/route-template.md` and refer to `/CONTRIBUTING.md` for detailed guidelines.
+### guide.md - Human Learning Content
+The "guide" is for humans learning independently:
+- Clear explanations with examples
+- Detailed code walkthroughs
+- Hands-on exercises with solutions
+- Self-check points
+- Practice projects
 
-## Pairing with Guides
+## Learning Modes
 
-Each route should have a corresponding AI teaching guide with the same filename:
-- `routes/tools/git-basics.md` ↔ `guides/tools/git-basics.md`
-- Both cover the same material, optimized for different learning modes
+Each route supports three modes:
+
+1. **Self-Paced**: Read guide.md independently
+2. **AI-Guided**: Learn through conversation with AI using sherpa.md
+3. **Collaborative**: Read guide.md while AI assists using sherpa.md
+
+## Creating a New Route
+
+1. Create a new subdirectory: `routes/your-topic/`
+2. Use the templates in `/techniques/` as starting points
+3. Create all three files: `map.md`, `sherpa.md`, `guide.md`
+4. Reference reusable content from `/tools/` and `/techniques/`
+
+See `/CONTRIBUTING.md` for detailed guidelines.
