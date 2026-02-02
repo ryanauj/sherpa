@@ -79,7 +79,7 @@ mkdir -p routes/your-topic
 Use templates from `/techniques/`:
 
 ```bash
-cp techniques/map-template.md routes/your-topic/map.md
+cp techniques/map-template-v1.md routes/your-topic/map.md
 cp techniques/sherpa-template-v1.md routes/your-topic/sherpa.md
 cp techniques/guide-template-v1.md routes/your-topic/guide.md
 ```

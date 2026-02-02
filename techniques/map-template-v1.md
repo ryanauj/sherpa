@@ -1,10 +1,11 @@
 ---
 title: [Route Title]
-difficulty: beginner|intermediate|advanced
-duration: [X] minutes
 topics:
   - Topic 1
   - Topic 2
+related_routes:
+  - related-route-1
+  - related-route-2
 ---
 
 # [Route Title] - Route Map
@@ -29,26 +30,20 @@ Before starting this route:
 
 ## Route Structure
 
-### 1. [Section Name] ([X] min)
+### 1. [Section Name]
 - [Key point 1]
 - [Key point 2]
 
-### 2. [Section Name] ([X] min)
+### 2. [Section Name]
 - [Key point 1]
 - [Key point 2]
 
-### 3. [Section Name] ([X] min)
+### 3. [Section Name]
 - [Key point 1]
 - [Key point 2]
 
-### 4. [Practice Project] ([X] min)
+### 4. [Practice Project]
 - [What learners will build]
-
-## Estimated Time
-
-- **Total**: [X] minutes
-- **Hands-on practice**: [X] minutes
-- **Reading/learning**: [X] minutes
 
 ## Learning Modes
 

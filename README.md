@@ -94,7 +94,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 
 1. Create a subdirectory: `routes/your-topic/`
 2. Use templates from `techniques/`:
-   - `map-template.md` → `map.md`
+   - `map-template-v1.md` → `map.md`
    - `sherpa-template-v1.md` → `sherpa.md`
    - `guide-template-v1.md` → `guide.md`
 3. Fill in all three files with aligned content

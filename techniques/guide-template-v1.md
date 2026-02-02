@@ -1,8 +1,7 @@
 ---
 title: [Route Title]
-difficulty: beginner|intermediate|advanced
-duration: [X] minutes
-paired_guide: /guides/[category]/[filename].md
+route_map: /routes/[route-name]/map.md
+paired_sherpa: /routes/[route-name]/sherpa.md
 prerequisites: 
   - Prerequisite 1
   - Prerequisite 2
@@ -359,12 +358,12 @@ Ready for more? Here are your next options:
 **Build on this topic:**
 - [Next tutorial in sequence](link) - [What it covers]
 
-**Explore related topics:**
-- [Related tutorial 1](link) - [What it covers]
-- [Related tutorial 2](link) - [What it covers]
+**Explore related routes:**
+- [Related route 1](/routes/[route-name]/map.md) - [What it covers]
+- [Related route 2](/routes/[route-name]/map.md) - [What it covers]
 
 **Go deeper:**
-- [Advanced tutorial](link) - [What it covers]
+- [Advanced route](/routes/[route-name]/map.md) - [What it covers]
 
 ### Practice More
 

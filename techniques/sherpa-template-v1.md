@@ -1,8 +1,7 @@
 ---
 title: [Route Title]
-difficulty: beginner|intermediate|advanced
-duration: [X] minutes
-paired_route: /routes/[category]/[filename].md
+route_map: /routes/[route-name]/map.md
+paired_guide: /routes/[route-name]/guide.md
 topics:
   - Topic 1
   - Topic 2
@@ -29,18 +28,13 @@ Before starting, verify the learner has:
 - Prerequisite 1
 - Prerequisite 2
 
-**If prerequisites are missing**: Suggest they review [prerequisite tutorial] first or offer a quick primer.
+**If prerequisites are missing**: Suggest they review [prerequisite route] first or offer a quick primer.
 
-### Estimated Time
-- [X] minutes for core content
-- [Y] minutes for exercises
-- Total: ~[Z] minutes
-
----
+### Learner Preferences Configuration
 
 ## Teaching Flow
 
-### Introduction (5 min)
+### Introduction
 
 **What to Cover:**
 - Brief overview of what they'll learn
@@ -59,7 +53,7 @@ Before starting, verify the learner has:
 
 ---
 
-### Section 1: [First Concept] (10 min)
+### Section 1: [First Concept]
 
 **Core Concept to Teach:**
 [Brief description of the concept]
@@ -129,7 +123,7 @@ solution here
 
 ---
 
-### Section 2: [Second Concept] (10 min)
+### Section 2: [Second Concept]
 
 [Follow same structure as Section 1]
 
@@ -159,7 +153,7 @@ code here
 
 ---
 
-### Section 3: [Building on Concepts] (15 min)
+### Section 3: [Building on Concepts]
 
 **Integration Teaching:**
 Now show how the concepts work together.
@@ -196,7 +190,7 @@ code here
 
 ---
 
-## Practice Project (20 min)
+## Practice Project
 
 **Project Introduction:**
 "Now let's put everything together with a small project. [Project description]"
@@ -234,7 +228,7 @@ When reviewing their work:
 
 ---
 
-## Wrap-Up and Next Steps (5 min)
+## Wrap-Up and Next Steps
 
 **Review Key Takeaways:**
 "Let's review what you learned today:"
