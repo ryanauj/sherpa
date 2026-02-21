@@ -10,6 +10,7 @@ Sherpa is a markdown-based learning system. Learners pick a topic ("route"), and
   - `sherpa.md` — AI teaching script. How an AI should teach the topic: flow, questions, misconceptions, adaptive strategies.
   - `guide.md` — Human learning content. Self-study material with explanations, examples, exercises, and solutions.
 - **Three learning modes**: Self-paced (guide only), AI-guided (sherpa drives), Collaborative (human reads guide while AI assists via sherpa)
+- **Ascent**: A guided project that spans multiple routes. Learners build a complete application by progressing through route checkpoints, applying each route's skills to a single evolving project. Stored as a subdirectory under `ascents/` with a single markdown file.
 
 ## Repository Structure
 
@@ -20,11 +21,15 @@ sherpa/
 │       ├── map.md
 │       ├── sherpa.md
 │       └── guide.md
+├── ascents/             # Cross-route guided projects (ascents)
+│   └── <ascent-name>/
+│       └── ascent.md
 ├── tools/               # Reusable scripts, visualizations, quizzes
 ├── techniques/          # Templates and patterns for creating routes
 │   ├── map-template-v1.md
 │   ├── sherpa-template-v1.md
-│   └── guide-template-v1.md
+│   ├── guide-template-v1.md
+│   └── ascent-template-v1.md
 ├── CONTRIBUTING.md
 └── README.md
 ```
@@ -59,6 +64,20 @@ sherpa/
 - Exercises with progressive hints in collapsible `<details>` blocks
 - Self-check checkpoints between sections
 - Practice project that integrates all concepts
+
+### ascent.md
+- YAML frontmatter with `title` and `routes` (list of route names the ascent spans)
+- Describes a complete application the learner builds across multiple routes
+- Organized into checkpoints, each tied to a specific route
+- Each checkpoint explains what to apply from the route to the project
+- Milestones describe the state of the project after each checkpoint
+
+## Creating an Ascent
+
+1. Create `ascents/<ascent-name>/` directory
+2. Copy `techniques/ascent-template-v1.md` to `ascents/<ascent-name>/ascent.md`
+3. Fill in the template — checkpoints must reference existing routes
+4. Ascent names should be lowercase-kebab-case (e.g., `my-first-ios-app`)
 
 ## Quality Checks for Routes
 
