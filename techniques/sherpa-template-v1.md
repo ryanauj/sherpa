@@ -23,6 +23,9 @@ By the end of this session, the learner should be able to:
 - Objective 2
 - Objective 3
 
+### Prior Sessions
+Before starting, check `.sessions/index.md` and `.sessions/[route-name]/` for prior session history. If the learner has completed previous sessions on this route, review the summaries to understand what they've covered and pick up where they left off.
+
 ### Prerequisites to Verify
 Before starting, verify the learner has:
 - Prerequisite 1
