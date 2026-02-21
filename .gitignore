@@ -33,3 +33,6 @@ node_modules/
 
 # Claude Code worktrees (auto-generated, local only)
 .claude/worktrees/
+
+# Local learning session logs
+.sessions/
