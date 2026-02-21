@@ -69,6 +69,21 @@ All three files in a route must:
 - Cross-reference each other correctly in frontmatter
 - Be self-contained enough for their intended audience (AI or human)
 
+## Session Tracking
+
+Learning sessions are logged locally in `.sessions/` (gitignored). When teaching a route via the sherpa script:
+
+1. **Before starting**: Check `.sessions/index.md` and the route's session directory (e.g., `.sessions/tmux-basics/`) for prior session history. Use this to understand what the learner has already covered and where they left off.
+2. **After completing a session**: Create a summary file at `.sessions/<route>/<date>.md` covering what was taught, issues encountered, learner confidence level, and any route changes made. Update `.sessions/index.md` with a link to the new summary.
+
+The `.sessions/` directory structure:
+```
+.sessions/
+├── index.md                    # Index of all sessions, links to summaries
+└── <route-name>/
+    └── YYYY-MM-DD.md           # Session summary
+```
+
 ## What NOT to Do
 
 - No time estimates in route sections
