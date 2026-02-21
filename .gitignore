@@ -1,0 +1,35 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+
+# Build artifacts (if any get added in the future)
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+node_modules/
+
+# Claude Code worktrees (auto-generated, local only)
+.claude/worktrees/
