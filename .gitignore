@@ -30,3 +30,6 @@ build/
 __pycache__/
 *.pyc
 node_modules/
+
+# Claude Code worktrees (auto-generated, local only)
+.claude/worktrees/
