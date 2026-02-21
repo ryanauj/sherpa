@@ -30,6 +30,7 @@ By the end of this tutorial, you will be able to:
 - Organize work with windows and panes
 - Navigate efficiently with tmux key bindings
 - Write a basic `.tmux.conf` configuration
+- Use copy mode to scroll back through terminal output
 
 ## Prerequisites
 
@@ -541,6 +542,74 @@ Before moving on, make sure you can:
 
 ---
 
+## Section 5: Copy Mode
+
+### Scrolling Through Output
+
+When terminal output scrolls past, you need copy mode to go back and read it. Copy mode turns your pane into a scrollable buffer.
+
+**Enter copy mode:**
+`Ctrl-b [` (prefix then left bracket)
+
+**Navigate (default):**
+- Arrow keys to move
+- Page Up / Page Down to scroll
+
+**Navigate (with vi mode-keys):**
+- `h`/`j`/`k`/`l` to move
+- `Ctrl-u` / `Ctrl-d` for half-page scrolling
+- `/` to search forward, `?` to search backward
+
+**Exit copy mode:**
+`q`
+
+### Enabling Vi Mode
+
+If you're comfortable with vim keybindings, add this to your `~/.tmux.conf`:
+
+```
+# Use vi keybindings in copy mode
+setw -g mode-keys vi
+```
+
+This changes navigation in copy mode from arrow keys to h/j/k/l and adds vim-style search. The default arrow-key navigation works fine if you prefer it.
+
+**Note:** With mouse mode enabled (`set -g mouse on`), scrolling your mouse wheel automatically enters copy mode. Without mouse mode, you need `Ctrl-b [`.
+
+### Exercise 5.1: Scroll Back Through Output
+
+**Task:** Run a command that produces lots of output (like `ls -la /usr/bin`), then use copy mode to scroll back and find a specific file.
+
+<details>
+<summary>Hint</summary>
+
+Enter copy mode with `Ctrl-b [`, then use Page Up or arrow keys to scroll back.
+</details>
+
+<details>
+<summary>Solution</summary>
+
+```bash
+# Generate some output
+ls -la /usr/bin
+
+# Enter copy mode
+# Ctrl-b [
+
+# Scroll with Page Up or arrow keys (or j/k in vi mode)
+# Press q to exit copy mode
+```
+</details>
+
+### Checkpoint 5
+
+Before moving on, make sure you can:
+- [ ] Enter and exit copy mode
+- [ ] Scroll back through terminal output
+- [ ] Understand the difference between default and vi-mode navigation
+
+---
+
 ## Practice Project
 
 ### Project Description
@@ -600,6 +669,9 @@ All bindings use the default prefix `Ctrl-b` (unless you've changed it).
 | Navigate panes | `Ctrl-b arrow` |
 | Zoom toggle | `Ctrl-b z` |
 | Show pane numbers | `Ctrl-b q` |
+| **Copy Mode** | |
+| Enter copy mode | `Ctrl-b [` |
+| Exit copy mode | `q` |
 | **Other** | |
 | Command prompt | `Ctrl-b :` |
 | Window list | `Ctrl-b w` |
@@ -616,10 +688,10 @@ You've learned the fundamentals of tmux:
 ## Next Steps
 
 Now that you understand tmux basics, explore:
-- **Copy Mode**: Search and copy text from terminal output (`Ctrl-b [`)
 - **Scripted Sessions**: Automate workspace creation with shell scripts
 - **tmux Plugin Manager (tpm)**: Extend tmux with community plugins
 - **Advanced Configuration**: Status bar customization, key binding tables, hooks
+- **Advanced Copy Mode**: Selecting and copying text, piping to system clipboard
 
 ## Additional Resources
 

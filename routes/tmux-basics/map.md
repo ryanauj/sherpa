@@ -25,6 +25,7 @@ By following this route, you will:
 - Organize your work with windows and panes
 - Navigate efficiently between sessions, windows, and panes
 - Customize tmux with a `.tmux.conf` configuration file
+- Use copy mode to scroll back through terminal output
 
 ## Prerequisites
 
@@ -61,7 +62,12 @@ Before starting this route:
 - Setting base index
 - Reloading configuration
 
-### 5. Practice Project
+### 5. Copy Mode
+- Entering and exiting copy mode
+- Scrolling through terminal output
+- Vi vs default key bindings in copy mode
+
+### 6. Practice Project
 - Build a development workspace with named sessions, windows, and panes
 
 ## Learning Modes
@@ -82,5 +88,5 @@ This route references:
 ## Next Steps
 
 After completing this route:
-- **tmux Advanced** - Scripting, copy mode, plugins, and tmux scripting
+- **tmux Advanced** - Scripting, plugins, advanced copy mode, and session automation
 - **Command Line Productivity** - Combine tmux with other CLI tools for an efficient workflow

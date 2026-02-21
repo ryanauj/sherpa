@@ -28,6 +28,7 @@ By the end of this session, the learner should be able to:
 - Organize work with windows and panes
 - Navigate efficiently with tmux key bindings
 - Write a basic `.tmux.conf` configuration
+- Use copy mode to scroll back through terminal output
 
 ### Prerequisites to Verify
 Before starting, verify the learner has:
@@ -417,6 +418,61 @@ bind r source-file ~/.tmux.conf \; display "Config reloaded"
 2. "Now reload: `Ctrl-b :` then `source-file ~/.tmux.conf`"
 3. "Test the new prefix — try `Ctrl-a c` to create a window"
 4. "Test mouse support — try clicking on different panes or scrolling"
+
+---
+
+### Section 5: Copy Mode
+
+**Core Concept to Teach:**
+Copy mode lets you scroll back through terminal output, search for text, and copy content. It turns your pane into a scrollable, searchable buffer.
+
+**How to Explain:**
+1. "Ever wanted to scroll up in your terminal to see output that scrolled past? In tmux, that's copy mode"
+2. "Enter it with `prefix [`, scroll around, then press `q` to exit"
+3. "By default you navigate with arrow keys and Page Up/Down. If you add `mode-keys vi`, you can use h/j/k/l instead"
+
+**Walk Through Together:**
+
+Enter copy mode:
+"Press `prefix [` — the status bar will change to indicate you're in copy mode"
+
+Navigate:
+- Arrow keys or Page Up/Down to scroll (default)
+- With `mode-keys vi`: h/j/k/l to move, Ctrl-u/Ctrl-d for half-page scrolling
+
+Search:
+- Press `/` to search forward (in vi mode)
+- Press `?` to search backward (in vi mode)
+
+Exit:
+"Press `q` to leave copy mode"
+
+**Vi vs Default Mode:**
+"Adding `setw -g mode-keys vi` to your config gives you vim-style navigation in copy mode. If you're comfortable with vim keybindings, this is more efficient. If not, the default arrow-key navigation works fine."
+
+**Common Misconceptions:**
+- Misconception: "I can scroll with my mouse wheel without copy mode" → Clarify: "With mouse mode enabled, scrolling does enter copy mode automatically. Without it, you need `prefix [`"
+- Misconception: "Copy mode is complicated" → Clarify: "For basic scrolling, it's just `prefix [`, scroll, `q`. That's it"
+
+**Verification Questions:**
+1. "How do you enter and exit copy mode?"
+2. "What does `mode-keys vi` change?"
+
+**Good answer indicators:**
+- They know `prefix [` to enter and `q` to exit
+- They understand vi mode changes navigation keys in copy mode
+
+**If they struggle:**
+- Focus on just entering, scrolling with arrow keys, and exiting
+- "You don't need to learn everything about copy mode now — just scrolling back is useful enough"
+
+**Exercise 5.1:**
+"Run a command that produces lots of output (like `ls -la /usr/bin`), then use copy mode to scroll back and find a specific file."
+
+**How to Guide Them:**
+1. "Run the command, then press `prefix [` to enter copy mode"
+2. "Use Page Up or arrow keys to scroll back through the output"
+3. "Press `q` to exit when you've found it"
 
 ---
 
