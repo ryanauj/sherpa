@@ -36,3 +36,6 @@ node_modules/
 
 # Local learning session logs
 .sessions/
+
+# MNIST and other downloaded data
+ascents/neural-net-from-scratch/data/
