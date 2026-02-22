@@ -24,6 +24,10 @@ sherpa/
 │   │   ├── sherpa.md   # AI teaching script
 │   │   └── guide.md    # Human learning content
 │   └── ...
+├── ascents/            # Cross-route guided projects
+│   ├── my-first-ios-app/
+│   │   └── ascent.md   # Project checkpoints tied to routes
+│   └── ...
 ├── tools/              # Reusable scripts, visualizations, quizzes
 └── techniques/         # Templates, patterns, best practices
 ```
@@ -56,6 +60,17 @@ For humans learning independently:
 - Self-check points
 - Practice projects
 
+## Ascents
+
+An **ascent** is a guided project that spans multiple routes. Instead of learning topics in isolation, you build a complete application by progressing through route checkpoints — applying each route's skills to a single evolving project.
+
+Each ascent contains:
+- **A summit** — the finished application you're building toward
+- **Checkpoints** — each tied to a specific route, with tasks that apply that route's skills to the project
+- **Milestones** — what the project looks like after each checkpoint
+
+Ascents live in `ascents/<ascent-name>/ascent.md`.
+
 ## Three Learning Modes
 
 ### Mode 1: Self-Paced
@@ -81,6 +96,13 @@ Routes, sherpas, and guides can include tips and prompts to help AI assistants a
 - **For humans**: Prompts to ask when stuck, ways to request different explanations, how to pace learning
 - **For AI**: Strategies to check understanding, adapt teaching style, provide appropriate hints
 - **For both**: Best practices for collaborative learning, effective question formats, feedback mechanisms
+
+## Creating an Ascent
+
+1. Create a subdirectory: `ascents/your-ascent-name/`
+2. Copy `techniques/ascent-template-v1.md` → `ascent.md`
+3. Define checkpoints that reference existing routes
+4. Each checkpoint should describe specific tasks applying that route's knowledge to the project
 
 ## Contributing
 
