@@ -200,6 +200,18 @@ async function loadPage(path) {
     // Strip YAML frontmatter
     const cleaned = md.replace(/^---[\s\S]*?---\n*/, '');
     body.innerHTML = marked.parse(cleaned);
+    // Intercept internal markdown links and route them through the SPA
+    body.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      // Match absolute or relative links to .md files within the content tree
+      const match = href.match(/^(?:\.\.\/)*(?:\/)?((?:routes|ascents|techniques)\/[^\s]+\.md)$/);
+      if (match) {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          loadPage(match[1]);
+        });
+      }
+    });
   } catch (err) {
     body.innerHTML = `<p class="loading">Could not load <code>${path}</code>: ${err.message}</p>`;
   }
