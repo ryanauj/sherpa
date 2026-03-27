@@ -2,6 +2,10 @@
 
 const BASE = '.'; // all files served from site root
 
+// Fallback: fetch from GitHub raw content if local files aren't available
+// (e.g., when Pages is served from docs/ instead of a full Actions deployment)
+const RAW_BASE = 'https://raw.githubusercontent.com/ryanauj/sherpa/main';
+
 const CONTENT_TREE = {
   'Getting Started': {
     type: 'files',
@@ -168,6 +172,22 @@ function buildNav() {
 
 // --- Content loading ---
 
+async function fetchMarkdown(path) {
+  // Try relative fetch first (works with full Actions deployment)
+  const localRes = await fetch(`${BASE}/${path}`);
+  if (localRes.ok) {
+    const text = await localRes.text();
+    // Verify we got markdown, not an HTML fallback page
+    if (!text.trimStart().startsWith('<!DOCTYPE') && !text.trimStart().startsWith('<html')) {
+      return text;
+    }
+  }
+  // Fallback to GitHub raw content (works when served from docs/ folder)
+  const rawRes = await fetch(`${RAW_BASE}/${path}`);
+  if (!rawRes.ok) throw new Error(`${rawRes.status} ${rawRes.statusText}`);
+  return rawRes.text();
+}
+
 async function loadPage(path) {
   const body = document.getElementById('markdown-body');
   body.innerHTML = '<p class="loading">Loading…</p>';
@@ -194,9 +214,7 @@ async function loadPage(path) {
   document.getElementById('sidebar').classList.remove('open');
 
   try {
-    const res = await fetch(`${BASE}/${path}`);
-    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-    const md = await res.text();
+    const md = await fetchMarkdown(path);
     // Strip YAML frontmatter
     const cleaned = md.replace(/^---[\s\S]*?---\n*/, '');
     body.innerHTML = marked.parse(cleaned);

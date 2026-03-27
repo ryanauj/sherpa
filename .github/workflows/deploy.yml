@@ -31,6 +31,8 @@ jobs:
           # Copy all markdown content
           cp -r routes ascents techniques tools _site/
           cp README.md CONTRIBUTING.md _site/
+          # Prevent Jekyll processing so .md files are served as-is
+          touch _site/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
       - id: deployment
