@@ -1,6 +1,6 @@
 /* Sherpa — lightweight GitHub Pages viewer */
 
-const BASE = '..'; // markdown files are one level up from docs/
+const BASE = '.'; // all files served from site root
 
 const CONTENT_TREE = {
   'Getting Started': {
