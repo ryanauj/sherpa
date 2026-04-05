@@ -130,6 +130,7 @@ This project has 30+ routes with ~76K total lines of markdown. Individual files 
 - **Work on one file at a time.** Reading multiple route files in a single task will likely exceed context limits and cause timeouts.
 - **Don't read files you don't need.** If editing a guide, you probably don't need to also read the sherpa and map for the same route.
 - **Prefer the main conversation for edits over sub-agents.** Sub-agents have smaller effective context and are more likely to timeout on large files.
+- **Break large tasks into small, specific chunks and add them all to the todo list.** For example, editing a route should become separate todo items per file and per section. The main agent should complete each item sequentially — do not delegate editing tasks to sub-agents.
 - **When creating or editing a route, do one file at a time** (map first, then sherpa, then guide) across separate requests rather than all three at once.
 
 ## What NOT to Do
