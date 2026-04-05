@@ -29,7 +29,7 @@ jobs:
           # Copy the app shell
           cp docs/index.html docs/style.css docs/app.js _site/
           # Copy all markdown content
-          cp -r routes ascents techniques tools _site/
+          cp -r routes ascents atlases techniques tools _site/
           cp README.md CONTRIBUTING.md _site/
 
       - uses: actions/upload-pages-artifact@v3
