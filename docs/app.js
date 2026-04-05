@@ -60,6 +60,12 @@ const CONTENT_TREE = {
       'neural-net-from-scratch',
     ],
   },
+  'Atlases': {
+    type: 'atlases',
+    items: [
+      'statistics',
+    ],
+  },
   'Techniques': {
     type: 'files',
     items: [
@@ -68,6 +74,7 @@ const CONTENT_TREE = {
       { label: 'Sherpa Template', path: 'techniques/sherpa-template-v1.md' },
       { label: 'Guide Template', path: 'techniques/guide-template-v1.md' },
       { label: 'Ascent Template', path: 'techniques/ascent-template-v1.md' },
+      { label: 'Atlas Template', path: 'techniques/atlas-template-v1.md' },
     ],
   },
 };
@@ -128,6 +135,13 @@ function buildNav() {
           .replace(/\bIos\b/g, 'iOS');
         html += `<div class="nav-group"><div class="nav-files open">`;
         html += `<a href="#" data-path="ascents/${ascent}/ascent.md">${display}</a>`;
+        html += '</div></div>';
+      }
+    } else if (config.type === 'atlases') {
+      for (const atlas of config.items) {
+        const display = atlas.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        html += `<div class="nav-group"><div class="nav-files open">`;
+        html += `<a href="#" data-path="atlases/${atlas}/atlas.md">${display}</a>`;
         html += '</div></div>';
       }
     }
@@ -204,7 +218,7 @@ async function loadPage(path) {
     body.querySelectorAll('a[href]').forEach(a => {
       const href = a.getAttribute('href');
       // Match absolute or relative links to .md files within the content tree
-      const match = href.match(/^(?:\.\.\/)*(?:\/)?((?:routes|ascents|techniques)\/[^\s]+\.md)$/);
+      const match = href.match(/^(?:\.\.\/)*(?:\/)?((?:routes|ascents|atlases|techniques)\/[^\s]+\.md)$/);
       if (match) {
         a.addEventListener('click', e => {
           e.preventDefault();
