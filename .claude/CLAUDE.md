@@ -11,6 +11,7 @@ Sherpa is a markdown-based learning system. Learners pick a topic ("route"), and
   - `guide.md` — Human learning content. Self-study material with explanations, examples, exercises, and solutions.
 - **Three learning modes**: Self-paced (guide only), AI-guided (sherpa drives), Collaborative (human reads guide while AI assists via sherpa)
 - **Ascent**: A guided project that spans multiple routes. Learners build a complete application by progressing through route checkpoints, applying each route's skills to a single evolving project. Stored as a subdirectory under `ascents/` with a single markdown file.
+- **Atlas**: A domain-level reference that indexes methods, concepts, and techniques across a family of related routes. Stored as a subdirectory under `atlases/` with a single `atlas.md` file. Use an atlas to look up what a method does, when to use it, and which route teaches it.
 
 ## Repository Structure
 
@@ -24,12 +25,16 @@ sherpa/
 ├── ascents/             # Cross-route guided projects (ascents)
 │   └── <ascent-name>/
 │       └── ascent.md
+├── atlases/             # Domain-level reference indexes
+│   └── <domain>/
+│       └── atlas.md
 ├── tools/               # Reusable scripts, visualizations, quizzes
 ├── techniques/          # Templates and patterns for creating routes
 │   ├── map-template-v1.md
 │   ├── sherpa-template-v1.md
 │   ├── guide-template-v1.md
-│   └── ascent-template-v1.md
+│   ├── ascent-template-v1.md
+│   └── atlas-template-v1.md
 ├── CONTRIBUTING.md
 └── README.md
 ```
@@ -72,12 +77,26 @@ sherpa/
 - Each checkpoint explains what to apply from the route to the project
 - Milestones describe the state of the project after each checkpoint
 
+### atlas.md
+- YAML frontmatter with `title`, `domain`, `description`, `routes` (list of indexed routes), `last_updated`
+- Entries grouped under H2 category headings
+- Each entry is an H3 with: 1-3 sentence description, "Use when" guidance, optional "Watch out" for pitfalls, "Routes" with links to specific route sections
+- Written for dual audience: human scanning and AI agent lookup
+- Keep entries concise — the atlas is a reference index, not a textbook
+
 ## Creating an Ascent
 
 1. Create `ascents/<ascent-name>/` directory
 2. Copy `techniques/ascent-template-v1.md` to `ascents/<ascent-name>/ascent.md`
 3. Fill in the template — checkpoints must reference existing routes
 4. Ascent names should be lowercase-kebab-case (e.g., `my-first-ios-app`)
+
+## Creating an Atlas
+
+1. Create `atlases/<domain>/` directory
+2. Copy `techniques/atlas-template-v1.md` to `atlases/<domain>/atlas.md`
+3. Fill in entries — each entry needs: description, "Use when" guidance, and route links
+4. Atlas names should be lowercase-kebab-case matching the domain (e.g., `statistics`, `ios-development`)
 
 ## Quality Checks for Routes
 
