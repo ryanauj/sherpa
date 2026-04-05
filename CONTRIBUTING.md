@@ -189,6 +189,38 @@ Before submitting:
 3. **Test collaborative mode**: Do they work well together?
 4. **Get feedback**: Have others review or try your content
 
+## Atlas Structure
+
+An **atlas** is a domain-level reference that indexes methods, concepts, and techniques across related routes. It answers: "What is this method, when should I use it, and where can I learn it?"
+
+Atlases live in `atlases/<domain>/atlas.md`.
+
+### Creating a New Atlas
+
+#### Step 1: Identify the Domain
+An atlas covers a family of related routes. For example, the "statistics" atlas covers stats-fundamentals, probability-fundamentals, probability-distributions, statistical-inference, bayesian-statistics, stochastic-processes, and regression-and-modeling.
+
+#### Step 2: Create Atlas Directory
+
+```bash
+mkdir -p atlases/your-domain
+cp techniques/atlas-template-v1.md atlases/your-domain/atlas.md
+```
+
+#### Step 3: Organize Categories
+Group entries into logical categories that reflect the domain's structure. Categories should be intuitive enough that a learner can browse to the right neighborhood even if they don't know the exact method name.
+
+#### Step 4: Write Entries
+Each entry needs:
+- **Name** (H3 heading, with aliases in parentheses)
+- **Description**: 1-3 sentences explaining what it is
+- **Use when**: When a learner would reach for this method
+- **Watch out** (optional): Common pitfalls
+- **Routes**: Link(s) to the route and section where this is taught
+
+#### Step 5: Keep It Current
+Update `last_updated` in frontmatter when adding or modifying entries. When creating new routes in a domain that has an atlas, add relevant entries to the atlas.
+
 ## Supporting Resources
 
 ### Adding Tools

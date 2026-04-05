@@ -28,6 +28,10 @@ sherpa/
 │   ├── my-first-ios-app/
 │   │   └── ascent.md   # Project checkpoints tied to routes
 │   └── ...
+├── atlases/            # Domain-level reference indexes
+│   ├── statistics/
+│   │   └── atlas.md    # Methods, concepts, and route links
+│   └── ...
 ├── tools/              # Reusable scripts, visualizations, quizzes
 └── techniques/         # Templates, patterns, best practices
 ```
@@ -70,6 +74,17 @@ Each ascent contains:
 - **Milestones** — what the project looks like after each checkpoint
 
 Ascents live in `ascents/<ascent-name>/ascent.md`.
+
+## Atlases
+
+An **atlas** is a domain-level reference that maps out all methods, concepts, and techniques across a family of related routes. Use it to:
+- **Look up** a specific method and find which route teaches it
+- **Browse** categories to discover related techniques
+- **Navigate** from a concept back to detailed learning material
+
+Each entry includes a description, "use when" guidance, and links to the route(s) where the concept is taught in depth. Atlases are designed for both human browsing and AI agent lookup.
+
+Atlases live in `atlases/<domain>/atlas.md`.
 
 ## Three Learning Modes
 
